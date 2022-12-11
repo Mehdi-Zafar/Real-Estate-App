@@ -1,26 +1,277 @@
-html,
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&family=Raleway&display=swap");
+
+* {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+#nprogress .bar {
+  background: rgb(251, 255, 0) !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+.navbar {
+  background-image: linear-gradient(to right, #182848c4, #4b6cb7);
+  margin-bottom: 0;
+  align-items: center;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #182848;
+  color: white;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 25px;
+}
+
+#myBtn:hover {
+  background-color: #182848da;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.hero-section {
+  min-height: 90vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0.568)),
+    url("../public/hero-background.jpg");
+  background-size: 100% 100vh;
+  background-repeat: no-repeat;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 3rem;
+  color: burlywood;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.hero-section a {
+  margin-inline: 15px;
+}
+
+#about,
+#contact {
+  margin: 30px auto;
+  background-color: rgb(243, 236, 236);
+  padding: 5px 10px;
+  text-indent: 10px;
+}
+
+#about p {
+  font-size: 1.2rem;
+}
+
+#about h1,
+#contact h1 {
+  text-align: center;
+}
+
+.price-logo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sale-heading,
+.rent-heading {
+  text-align: center;
+}
+
+.sale-heading p,
+.rent-heading p {
+  color: gray;
+  text-transform: uppercase;
+}
+
+.search-filters {
+  background-color: whitesmoke;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.search-filters h2 {
+  color: rgb(65, 53, 53);
+}
+
+.select-input {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.search-start {
+  text-align: center;
+  margin-block: 35px;
+}
+
+.loader {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+}
+
+footer {
+  background-color: rgb(173, 191, 236);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 5px;
+}
+
+footer div {
+  margin-inline: 10px;
+}
+
+footer div h3 {
+  margin-inline: 5px;
+}
+
+footer div span {
+  margin-inline: 5px;
+}
+
+footer .icons {
+  font-size: 1.2rem;
+}
+
+footer .icons span:hover {
+  cursor: pointer;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.contact-info p {
+  margin: auto;
+  width: 80%;
+}
+
+.flex-info {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flex-info h4 {
+  font-size: 1.02rem;
+}
+
+.info-div {
+  background-color: rgb(227, 241, 253);
+  width: 260px;
+  padding: 5px 20px;
+  border-radius: 10px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.info-div h3 {
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+
+.info-div h4 {
+  text-align: start;
+}
+
+.amenity {
+  background-color: rgb(227, 241, 253);
+  padding: 5px 10px;
+  margin: 5px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.desc {
+  background-color: rgba(227, 241, 253, 0.651);
+  padding: 10px 0;
+  margin: 20px auto;
+}
+
+.desc h2 {
+  text-indent: 10px;
+}
+
+.desc p {
+  line-height: 2rem;
+  margin-inline: 10px;
+  letter-spacing: 0.3px;
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.amenities-div {
+  margin: 20px 10px;
+  letter-spacing: 0.3px;
+}
+
+.price-info {
+  background-color: rgb(227, 241, 253);
+  width: 220px;
+  padding: 1px 10px;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+.price-info h4 {
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 700px) {
+  .contact-info {
+    flex-direction: column;
   }
-  body {
-    color: white;
-    background: black;
+
+  .hero-section h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .hero-section h1 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .btn-group a {
+    margin: 5px;
   }
 }
