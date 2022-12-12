@@ -42,8 +42,6 @@ const Search = () => {
             .catch(err => console.error(err));
     }
 
-    console.log(property.length)
-
     return ( 
         <div>
       <Head>
@@ -210,7 +208,7 @@ const Search = () => {
             <h1><FaSearch/>&nbsp;Search your dream property!</h1>
         </div>
          :
-        property.length ?
+        property !== [] ?
         <div>
             <div className="rent-heading">
                 <h1>Search Results</h1>
