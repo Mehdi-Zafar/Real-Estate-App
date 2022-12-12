@@ -21,7 +21,7 @@ const Search = () => {
     const [property,setProperty] = useState(null)
     const [loader,setLoader] = useState(false)
 
-    console.log(property)
+
     function handleClick(){
         setLoader(true)
         const options = {
@@ -41,6 +41,8 @@ const Search = () => {
             })
             .catch(err => console.error(err));
     }
+
+    console.log(property.length)
 
     return ( 
         <div>
@@ -203,7 +205,13 @@ const Search = () => {
                 data-testid="loader"
             />
         </div>:
-        property ?<div>
+        property === null ?
+        <div className="search-start">
+            <h1><FaSearch/>&nbsp;Search your dream property!</h1>
+        </div>
+         :
+        property.length ?
+        <div>
             <div className="rent-heading">
                 <h1>Search Results</h1>
                 <p>Hope you like them</p>
@@ -211,14 +219,11 @@ const Search = () => {
             <div className="card-container">{property.map((property)=>{
             return <Property property={property} key={property.id}/> 
             })}</div>
-        </div> :
-        property !== null ?
-        <div className="no-result">
+        </div> 
+        :
+         <div className="no-result">
             <Image src={MyImage} width={500} height={500}/>
             <div>No Results available!</div>
-        </div> :
-        <div className="search-start">
-            <h1><FaSearch/>&nbsp;Search your dream property!</h1>
         </div>
         }</div>
         

@@ -57,7 +57,7 @@ a {
   min-height: 90vh;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0.568)),
-    url("../public/hero-background.jpg");
+    url("/hero-background.jpg");
   background-size: 100% 100vh;
   background-repeat: no-repeat;
   margin-top: 0px;
