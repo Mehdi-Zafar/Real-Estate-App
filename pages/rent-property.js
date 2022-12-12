@@ -15,7 +15,7 @@ const RentProperty = ({propertiesForRent}) => {
                 <h1>Property for Rent</h1>
                 <p>Rent a home</p>
             </div>
-            <div className="card-container">{propertiesForRent.map((property)=>{
+            <div className="card-container">{propertiesForRent && propertiesForRent.map((property)=>{
             return <Property property={property} key={property.id}/> 
             })}</div>
         </div>

@@ -15,7 +15,7 @@ const BuyProperty = ({propertiesForSale}) => {
                 <h1>Property for Sale</h1>
                 <p>Buy a home</p>
             </div>
-            <div className="card-container">{propertiesForSale.map((property)=>{
+            <div className="card-container">{propertiesForSale && propertiesForSale.map((property)=>{
             return <Property property={property} key={property.id}/>  
             })}</div>
         </div>
