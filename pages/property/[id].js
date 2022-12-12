@@ -31,7 +31,7 @@ const PropertyDetails = ({propertyDetails:{price,rentFrequency,rooms,title,baths
         <h2 style={{textAlign:'center'}}>{title}</h2>
         <Carousel sx={{width:'100%',marginBlock:"20px",textAlign:'center'}} animation='slide' duration='300' navButtonsAlwaysVisible='true'>
             {photos && photos.map((photo)=>(
-                <img src={photo.url} alt="" style={{width:'70%',height:'70vh',borderRadius:'10px'}}/>
+                <img key={photo.url} src={photo.url} alt="" style={{width:'70%',height:'70vh',borderRadius:'10px'}}/>
             ))}
         </Carousel>
     <TableContainer>
@@ -88,7 +88,7 @@ const PropertyDetails = ({propertyDetails:{price,rentFrequency,rooms,title,baths
         {amenities && <div className="amenities-div">
             <h2>Amenities:</h2>
             <div style={{display:'flex',flexWrap:'wrap'}}>{amenities.map((amenity)=>(
-            <div className="amenity">{amenity.text}</div>
+            <div className="amenity" key={amenity.text}>{amenity.text}</div>
         ))}</div>
         </div>}
 
