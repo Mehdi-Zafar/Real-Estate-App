@@ -2,7 +2,7 @@ import Property from '../comps/Property'
 import Head from 'next/head'
 import Image from 'next/image'
 import { FormControl,InputLabel,Select,MenuItem } from '@mui/material'
-import { useState,useEffect } from 'react'
+import { useState } from 'react'
 import { Button } from "@mui/material";
 import MyImage from '../public/not-found.jpg'
 import {FaSearch} from 'react-icons/fa'
@@ -21,12 +21,13 @@ const Search = () => {
     const [property,setProperty] = useState(null)
     const [loader,setLoader] = useState(false)
 
+    console.log(property)
     function handleClick(){
         setLoader(true)
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': process.env.API_KEY,
+                'X-RapidAPI-Key': process.env.NEXT_PUBLIC_API_KEY,
                 'X-RapidAPI-Host': 'bayut.p.rapidapi.com'
             }
         };
@@ -197,8 +198,6 @@ const Search = () => {
         <div className="loader">
             <RotateLoader
                 color='#000'
-                // loading={loading}
-                // cssOverride={override}
                 size={20}
                 aria-label="Loading Spinner"
                 data-testid="loader"
