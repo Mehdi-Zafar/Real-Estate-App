@@ -32,7 +32,7 @@ const Search = () => {
             }
         };
         
-        fetch(`https://bayut.p.rapidapi.com/properties/list?locationExternalIDs=5002%2C6020&&roomsMin=${roomsMin}&categoryExternalID=${propertyType}&bathsMin=${bathsMin}&furnishingStatus=${furnishingStatus}&priceMin=${priceMin}&priceMax=${priceMax}&sort=${sort}&purpose=${purpose}`, options)
+        fetch(`https://bayut.p.rapidapi.com/properties/list?locationExternalIDs=5002%2C6020&roomsMin=${roomsMin}&categoryExternalID=${propertyType}&bathsMin=${bathsMin}&furnishingStatus=${furnishingStatus}&priceMin=${priceMin}&priceMax=${priceMax}&sort=${sort}&purpose=${purpose}`, options)
             .then(response => response.json())
             .then(data => {
                 setLoader(false)
