@@ -36,7 +36,7 @@ const Search = () => {
             .then(response => response.json())
             .then(data => {
                 setLoader(false)
-                setProperty(data.hits)
+                setProperty(data?.hits)
                 setTimeout(()=>document.getElementById("results").scrollIntoView(true),1000)
             })
             .catch(err => console.error(err));
