@@ -15,6 +15,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  /* background-color: #faf8f4; */
 }
 
 a {
@@ -83,7 +84,7 @@ a {
 #about,
 #contact {
   margin: 30px auto;
-  background-color: rgb(243, 236, 236);
+  background-color: rgba(227, 241, 253, 0.651);
   padding: 5px 10px;
   text-indent: 10px;
 }
@@ -114,7 +115,7 @@ a {
 }
 
 .search-filters {
-  background-color: whitesmoke;
+  background-color: rgba(227, 241, 253, 0.562);
   text-align: center;
   padding: 20px 10px;
 }
@@ -144,7 +145,8 @@ a {
 }
 
 footer {
-  background-color: rgb(173, 191, 236);
+  /* background-color: rgb(173, 191, 236); */
+  background-color: rgb(208, 234, 255);
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -10,9 +10,7 @@ import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 import {ImPriceTag} from 'react-icons/im'
 import {BiTargetLock,BiPulse} from 'react-icons/bi'
 import {MdChair} from 'react-icons/md'
@@ -20,7 +18,6 @@ import {VscTypeHierarchySub} from 'react-icons/vsc'
 
 const PropertyDetails = ({propertyDetails:{price,rentFrequency,rooms,title,baths,area,agency,isVerified,description,type,purpose,furnshingStatus,amenities,photos}}) => {
 
-    console.log(amenities)
     return ( 
         <>
         <Head>
